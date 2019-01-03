@@ -1,0 +1,12 @@
+.\objects\main.o: ..\Application\main.c
+.\objects\main.o: ..\Drivers\board.h
+.\objects\main.o: ..\Drivers\device.h
+.\objects\main.o: ..\Drivers\device_usart.h
+.\objects\main.o: ..\Drivers\device_led.h
+.\objects\main.o: ..\Application\program_protocol.h
+.\objects\main.o: ..\Application\define.h
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: ..\Application\config.h
+.\objects\main.o: ..\Application\program.h
+.\objects\main.o: ..\Application\soft_timer.h
+.\objects\main.o: ..\cortexM3\hw.h

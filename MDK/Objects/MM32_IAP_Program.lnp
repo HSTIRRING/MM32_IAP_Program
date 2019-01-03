@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\program_protocol.o"
+".\objects\soft_timer.o"
+".\objects\hardware.o"
+".\objects\program.o"
+".\objects\board.o"
+".\objects\device_usart.o"
+".\objects\device_led.o"
+".\objects\hal_wwdg.o"
+".\objects\hal_uart.o"
+".\objects\hal_rcc.o"
+".\objects\hal_pwr.o"
+".\objects\hal_misc.o"
+".\objects\hal_iwdg.o"
+".\objects\hal_gpio.o"
+".\objects\hal_flash.o"
+".\objects\hal_exti.o"
+".\objects\hal_dma.o"
+".\objects\hal_crc.o"
+".\objects\system_mm32l3xx.o"
+".\objects\startup_mm32l3xx.o"
+".\objects\context.o"
+--strict --scatter ".\Objects\MM32_IAP_Program.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MM32_IAP_Program.map" -o .\Objects\MM32_IAP_Program.axf

@@ -1,0 +1,9 @@
+.\objects\program_protocol.o: ..\Application\program_protocol.c
+.\objects\program_protocol.o: ..\Drivers\device_usart.h
+.\objects\program_protocol.o: ..\Application\define.h
+.\objects\program_protocol.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\program_protocol.o: ..\Application\config.h
+.\objects\program_protocol.o: ..\Application\program_protocol.h
+.\objects\program_protocol.o: ..\Application\soft_timer.h
+.\objects\program_protocol.o: ..\Drivers\device.h
+.\objects\program_protocol.o: ..\Drivers\device_led.h

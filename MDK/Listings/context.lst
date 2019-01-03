@@ -1,0 +1,77 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/*
+    2 00000000         ; * File      : context.S
+    3 00000000         ; *
+    4 00000000         ; */
+    5 00000000         
+    6 00000000         
+    7 00000000                 AREA             |.text|, CODE, READONLY, ALIGN 
+= 2
+    8 00000000                 THUMB
+    9 00000000                 REQUIRE8
+   10 00000000                 PRESERVE8
+   11 00000000         
+   12 00000000         ;/*
+   13 00000000         ; * base_t hw_interrupt_disable();
+   14 00000000         ; */
+   15 00000000         hw_interrupt_disable
+                               PROC
+   16 00000000                 EXPORT           hw_interrupt_disable
+   17 00000000 F3EF 8010       MRS              r0, PRIMASK
+   18 00000004 B672            CPSID            I
+   19 00000006 4770            BX               LR
+   20 00000008                 ENDP
+   21 00000008         
+   22 00000008         ;/*
+   23 00000008         ; * void hw_interrupt_enable(rt_base_t level);
+   24 00000008         ; */
+   25 00000008         hw_interrupt_enable
+                               PROC
+   26 00000008                 EXPORT           hw_interrupt_enable
+   27 00000008 F380 8810       MSR              PRIMASK, r0
+   28 0000000C 4770            BX               LR
+   29 0000000E                 ENDP
+   30 0000000E         
+   31 0000000E                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\context.d -o.\objects\context.o -I.\RTE\_Target_1 -ID:\K
+eil_v5\ARM\PACK\MindMotion\MM32L3xx_DFP\1.0.6\Device\MM32L3xx\Include -ID:\Keil
+_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 523" --predefine="MM3
+2L362PF SETA 1" --list=.\listings\context.lst ..\cortexM3\context.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 7 in file ..\cortexM3\context.s
+   Uses
+      None
+Comment: .text unused
+hw_interrupt_disable 00000000
+
+Symbol: hw_interrupt_disable
+   Definitions
+      At line 15 in file ..\cortexM3\context.s
+   Uses
+      At line 16 in file ..\cortexM3\context.s
+Comment: hw_interrupt_disable used once
+hw_interrupt_enable 00000008
+
+Symbol: hw_interrupt_enable
+   Definitions
+      At line 25 in file ..\cortexM3\context.s
+   Uses
+      At line 26 in file ..\cortexM3\context.s
+Comment: hw_interrupt_enable used once
+3 symbols
+335 symbols in table
